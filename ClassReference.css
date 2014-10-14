@@ -1,0 +1,106 @@
+/**************************** MENU CLASSES **************************************************/
+
+/* TO DO: Make it less ugly. Even a little bit. */
+
+.menuitem > li {
+    display:block;
+    font-weight:bold;
+    padding:6px 10px 6px 15px;
+	/*width: 100%;*/
+    cursor:pointer;
+	border:1px solid #FFFFFF;
+    margin:0px 0px 0px -40px;
+	background: #993333;
+	color: #FFFFFF;
+}
+
+
+.articles > div {
+    display:none;
+}
+.articles > div:first-child {
+    display:block;
+}
+
+/********************************** BEGIN PAGE LAYOUT CLASSES *********************************/
+/* (source: http://www.dynamicdrive.com/style/layouts/item/css-fixed-layout-21-fixed-fixed/ ) */
+
+
+/* PE: make only the first article within the 'articles' section visible when the page loads */
+.articles > div{
+    display: none;
+}
+.articles > div:first-child{
+    display: block;
+}
+
+.articles {
+    margin:5px;
+}
+
+body{
+    font-family: "Segoe UI", sans-serif;
+	color: #000000;
+    margin:0;
+    padding:0;
+    line-height: 1.5em;
+}
+
+b{font-size: 110%;}
+
+em{color: red;}
+
+#maincontainer{
+    width: 840px; /*Width of main container*/
+    margin: 0 auto; /*Center container on page*/
+	border: 2px solid #993333;
+}
+
+header{
+    background: #993333;
+	color: #FFFFFF;
+    height: 90px; /*Height of top section*/
+}
+
+header h1{
+    margin: 0;
+    padding-top: 15px;
+	text-align: center; 
+}
+
+#contentwrapper{
+    float: left;
+    width: 100%;
+}
+
+#contentcolumn{
+    margin-left: 200px; /*Set left margin to LeftColumnWidth*/
+}
+
+#leftcolumn{
+    float: left;
+    width: 200px; /*Width of left column*/
+    margin-left: -840px; /*Set left margin to -(MainContainerWidth)*/
+/*background: #993333;*/
+}
+
+/* PE: Original used id selector #footer. Modified to select html5 footer class for assignment */
+    footer{
+    clear: left;
+    width: 100%;
+    /*background: #993333;*/
+    color: #993333;
+    text-align: center;
+    padding: 4px 0;
+}
+
+footer a{
+    color: 	#993333;
+}
+
+.innertube{
+    margin: 10px; /*Margins for inner DIV inside each column (to provide padding)*/
+    margin-top: 0;
+}
+
+/************************** END PAGE LAYOUT CLASSES **************************/
