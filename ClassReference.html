@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html> 
+    
+<head> 
+    <meta charset="UTF-8"> 
+    <title>Web Development Reference Page</title>
+    
+    <!--<script type="text/javascript" src="ShowHideDiv.js">-->
+    <link rel="stylesheet" type="text/css" href="ClassReference.css">
+        
+</head> <!--*****************************END OF HEAD **************************-->
+    
+<body>
+	<div id="maincontainer"> <!--******************  MAIN CONTAINER (OUTSIDE WRAPPER) *****************************-->
+         <header>
+            <div class="innertube"><h1>Paul's Web Development Class Reference Page</h1></div>
+        </header>
+
+        <!--**************************************** MAIN CONTENT COLUMN MARKUP *****************************************-->
+		<div id="contentwrapper" >
+			<div id="contentcolumn">
+				<div class="innertube"> 
+						   
+					<section class="articles">
+						<div class="home">
+							<article>
+								 <p>
+									Welcome to Paul's Web Development Class Reference Page. This page provides links to a variety of resources I know I'll need to use 
+									repeatedly during this class.
+								</p>
+								<p>
+									Select a topic from the left-column nav to view information about that topic. 
+								</p>
+							</article>
+						</div>
+						<div class="git">
+							<article>
+							<h2>Git reference</h2>
+								<p>
+									<a href="http://gitref.org/" alt="link to git commmand reference">Git command reference</a> - Great overview and command reference. 
+								</p>
+							</article>
+						</div>
+						<div class="bash">							
+							<article>
+								<h2>Bash reference</h2>
+								<p>
+									TO DO: Add refs to information about Bash.
+								</p>
+							</article>
+						</div>
+						<div class="html">
+							<article>
+							<h2>HTML reference</h2>							
+								<p>
+									TO DO: Add information about HTML5.
+								</p>
+							</article>
+						</div>
+						<div class="css">
+							<article>
+							<h2>CSS reference</h2>							
+								<p>
+									TO DO: Add information about CSS.
+								</p>
+							</article>
+						</div>
+						<div class="js">
+							<article>
+							<h2>Javascript reference</h2>							
+								<p>
+									TO DO: Add information about JavaScript.
+								</p>
+							</article>
+						</div>
+					</section>
+											  
+				</div>
+		   </div>
+		</div>
+         <!--**************************************** END MAIN COLUMN MARKUP ********************************************-->
+		 
+		 <!--*************************************** LEFT COLUMN (NAV) MARKUP *********************************************-->
+        <div id="leftcolumn">
+ 
+            <nav>
+					<ul class="menuitem">
+						<li class="home">Home</li>
+						<li class="git">Git</li>
+						<li class="bash">Bash</li>
+						<li class="html">HTML</li>
+						<li class="css">CSS</li>
+						<li class="js">Javascript</li>
+					</ul>
+            </nav>
+ 
+	    </div> 
+        <!--**************************************** END LEFT COLUMN MARKUP *********************************************-->
+		 
+         <!--**************************************** FOOTER MARKUP *****************************************************-->
+            
+        <footer>
+            <p>&copy; <span id="year"></span> Paul Elliott</p>
+                <script>
+                    var d=new Date();
+                    document.getElementById("year").innerHTML = d.getFullYear();
+                </script>
+            <p>Thanks, <a href="http://www.dynamicdrive.com/style/">Dynamic Drive</a>!</p>
+        </footer>
+		
+	</div><!--************************************** MAIN CONTAINER CLOSE **********************************************-->
+
+	<!-- 	This shows/hides the divs in the main content area when the menu is clicked. It's here because I haven't figured out how to 
+			make it work in external file yet--it executes before the li items exist and doesn't work. -->
+			
+	<!-- 	source: http://jsfiddle.net/NHKZL/ -->
+	<script>
+	var menu_elements = document.querySelectorAll('.menuitem>li'),
+		menu_length = menu_elements.length;
+		
+	for (var i = 0; i < menu_length; i++) {
+		menu_elements[i].addEventListener('click', function (e) {
+			var target = document.querySelector('.articles>.' + e.target.classList[0]); // clicked element
+			Array.prototype.filter.call(target.parentNode.children, function (siblings) {
+				siblings.style.display = 'none'; // hide sibling elements
+			});
+			target.style.display = 'block'; // show clicked element
+		});
+	}
+	</script>	
+
+	
+
+</body>
+    
+</html>
