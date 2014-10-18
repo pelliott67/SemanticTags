@@ -13,17 +13,22 @@
     
 <body>
 	<div id="maincontainer"> <!--******************  MAIN CONTAINER (OUTSIDE WRAPPER) *****************************-->
+    <!-- no semantic value - exists only to enable positioning of all other page areas. -->
          <header>
-            <div class="innertube"><h1>Paul's Web Development Class Reference Page</h1></div>
+            <div class="innertube"><h1>Paul's Web Development Class Reference Page</h1></div> <!-- no semantic value - for controlling padding inside content areas -->
         </header>
 
         <!--**************************************** MAIN CONTENT COLUMN MARKUP *****************************************-->
-		<div id="contentwrapper" >
+		<div id="contentwrapper" > <!-- no semantic value - exists only to enable positioning of the center page area -->
 			<div id="contentcolumn">
-				<div class="innertube"> 
+				<div class="innertube"> <!-- no semantic value - exists only to enable uniform control of padding inside any page area -->
 						   
 					<section class="articles">
-						<div class="home">
+						<div class="home"> <!-- It seemed to me that using div here (instead of section for ex., which I put one level up) was the best way of separating
+                                                semantics/content from layout. 
+                                                To me semantically this is one page section ('articles') in which different types of content can be shown/hidden. 
+                                                These divs are part of the mechanics of the js/css that shows/hides the content. At present the content is just articles but 
+                                                in the future it could be a mix of semantic types. These layout mechanics should be semantically 'agnostic' divs.  -->
 							<article>
 								 <p>
 									Welcome to Paul's Web Development Class Reference Page. This page provides links to a variety of resources I know I'll need to use 
@@ -83,7 +88,10 @@
          <!--**************************************** END MAIN COLUMN MARKUP ********************************************-->
 		 
 		 <!--*************************************** LEFT COLUMN (NAV) MARKUP *********************************************-->
-        <div id="leftcolumn">
+        <div id="leftcolumn"> <!-- no semantic meaning - exists only to enable positions o the fixed left page area. 
+                                    I chose to use a div for this and put the nav tag inside it in order to separate layout from semantics. This way 
+                                    if I later decide that the left column will hold other semantic types in addition to nav I can just add them instead 
+                                    of having to change the tagging. This is more flexible.-->
  
             <nav>
 					<ul class="menuitem">
