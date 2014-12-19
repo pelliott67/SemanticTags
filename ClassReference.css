@@ -5,8 +5,8 @@
 .menuitem > li {
     display:block;
     font-weight:bold;
-    padding:6px 10px 6px 15px;
-	/*width: 100%;*/
+    font-size: 30px;
+    padding:25px 0 25px 30px;
     cursor:pointer;
 	border:1px solid #FFFFFF;
     margin:0px 0px 0px -40px;
@@ -14,6 +14,9 @@
 	color: #FFFFFF;
 }
 
+.menuitem > li:hover {
+	background: #EB6060;
+}
 
 .articles > div {
     display:none;
@@ -38,12 +41,16 @@
     margin:5px;
 }
 
+article {
+    font-size: 1.75em;
+}
+
 body{
     font-family: "Segoe UI", sans-serif;
 	color: #000000;
     margin:0;
     padding:0;
-    line-height: 1.5em;
+    line-height: 2em;
 }
 
 b{font-size: 110%;}
@@ -51,7 +58,7 @@ b{font-size: 110%;}
 em{color: red;}
 
 #maincontainer{
-    width: 840px; /*Width of main container*/
+    width: 940px; /*Width of main container*/
     margin: 0 auto; /*Center container on page*/
 	border: 2px solid #993333;
 }
@@ -74,13 +81,13 @@ header h1{
 }
 
 #contentcolumn{
-    margin-left: 200px; /*Set left margin to LeftColumnWidth*/
+    margin-left: 250px; /*Set left margin to LeftColumnWidth*/
 }
 
 #leftcolumn{
     float: left;
-    width: 200px; /*Width of left column*/
-    margin-left: -840px; /*Set left margin to -(MainContainerWidth)*/
+    width: 250px; /*Width of left column*/
+    margin-left: -940px; /*Set left margin to -(MainContainerWidth)*/
 /*background: #993333;*/
 }
 

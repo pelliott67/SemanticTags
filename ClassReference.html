@@ -31,8 +31,8 @@
                                                 in the future it could be a mix of semantic types. These layout mechanics should be semantically 'agnostic' divs.  -->
 							<article>
 								 <p>
-									Welcome to Paul's Web Development Class Reference Page. This page provides links to a variety of resources I know I'll need to use 
-									repeatedly during this class.
+									increased the overall content container and the left nav secion size in order to make nav button a lot bigger (for better clickability) and increase                                     font size throughout (for low vision). I also added a hover color for visual feedback.
+                                    (The contrast was already good.)
 								</p>
 								<p>
 									Select a topic from the left-column nav to view information about that topic. 
@@ -43,7 +43,7 @@
 							<article>
 							<h2>Git resources</h2>
 								<p>
-									<a href="http://gitref.org/" alt="link to git commmand reference">Git command reference</a> - Great overview and command reference. 
+									<a href="http://gitref.org/">Git command reference</a> - Great overview and command reference. 
 								</p>
 							</article>
 						</div>
@@ -59,24 +59,31 @@
 							<article>
 							<h2>HTML reference</h2>							
 								<p>
-									TO DO: Add information about HTML5.
+									<a href="https://gsnedders.html5.org/outliner/">HTML5 outliner tool</a> - Very useful. Per HTML5 Doctor, "If you see any                                         instances of “untitled section” that corresponds to a section, you’re probably doing it wrong. (It’s fine for a nav or aside element to be                                               untitled, however)."
 								</p>
 							</article>
 						</div>
 						<div class="css">
 							<article>
 							<h2>CSS reference</h2>							
-								<p>
-									<a href="http://www.dynamicdrive.com/style/" alt="link to css dynamic overdrive">Dynamic Drive CSS library</a> - Page and page part layouts. 
-								</p>
+								
+                                <ul>
+									<li><a href="http://www.subcide.com/articles/creating-a-css-layout-from-scratch/P1/">CSS basic layout tutorial</a>                                                                             - Great explanation and examples of 2D page layout</li>
+                                    <li><a href="http://css.maxdesign.com.au/floatutorial/index.htm">Float tutorial home</a> Many tutorials at different                                                                        levels of css layout using float.</li>
+                                    <li><a href="http://css.maxdesign.com.au/floatutorial/introduction.htm">Float tutorial</a> Very clear basic explanation                                                                     of float</li>
+                                    <li><a href="http://www.dynamicdrive.com/style/">Dynamic Drive CSS library</a> - Page and page part layouts.</li>
+                                    <li><a href="http://www.w3schools.com/tags/ref_colorpicker.asp">Link to a good hex color picker</a></li>
+                                </ul>
+								
 							</article>
 						</div>
 						<div class="js">
 							<article>
 							<h2>Javascript reference</h2>							
 								<p>
-									<a href="http://jsfiddle.net/NHKZL/" alt="Link to code to show/hide divs from a menu">Show/hide divs</a> - Code to swap divs based by clicking menu
+									<a href="http://jsfiddle.net/NHKZL/">Show/hide divs</a> - Code to swap divs based by clicking menu
                                     items.
+                                    <a href="http://www.zytrax.com/tech/web/regex.htm#experiment">Regex tutorial</a> - Great tutorial for learning                                            regular expressions.
 								</p>
 							</article>
 						</div>
@@ -92,6 +99,8 @@
                                     I chose to use a div for this and put the nav tag inside it in order to separate layout from semantics. This way 
                                     if I later decide that the left column will hold other semantic types in addition to nav I can just add them instead 
                                     of having to change the tagging. This is more flexible.-->
+            
+            <!-- On futher thought I wonder if I should have used <menu> here since this is functioning more like a menu than site nav -->
  
             <nav>
 					<ul class="menuitem">
@@ -121,7 +130,7 @@
 	</div><!--************************************** MAIN CONTAINER CLOSE **********************************************-->
 
 	<!-- 	This shows/hides the divs in the main content area when the menu is clicked. It's here because I haven't figured out how to 
-			make it work in external file yet--it executes before the li items exist and doesn't work. -->
+			make it work in external file yet - it executes before the li items exist and doesn't work. -->
 			
 	<!-- 	source: http://jsfiddle.net/NHKZL/ -->
 	<script>
